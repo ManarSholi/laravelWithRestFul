@@ -18,9 +18,9 @@ class ExampleTest extends DuskTestCase
      */
     public function testBasicExample()
     {
-        $user = factory(User::class)->create([
+        /*$user = factory(User::class)->create([
             'email' => 'taylor@laravel.com',
-        ]);
+        ]);*/
 /* 
         $this->browse(function($browser) use($user){
             $browser->visit('/login')
@@ -29,7 +29,7 @@ class ExampleTest extends DuskTestCase
                     ->press('login')
                     ->assertPathIs('/home')
         });*/
-        $this->browse(function(){
+        /*$this->browse(function(){
             $first->loginAs(User::find(1))
             ->visit('/home')
             ->waitForText('Message');
@@ -42,11 +42,11 @@ class ExampleTest extends DuskTestCase
             $first->waitForText('Hey Taylor')
                     ->assertSee('Jeffrey Way');
         });
-
-        /*
+        */
+        
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
                     ->assertSee('Laravel');
-        });*/
+        });
     }
 }
